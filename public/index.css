@@ -128,6 +128,14 @@
 
 }
 
+#contacto{
+
+    position: fixed;
+    top: 570px;
+    left: 10px;
+
+}
+
 body {
 
     background-color: #453939;

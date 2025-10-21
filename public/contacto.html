@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+     <link rel="stylesheet" href="contacto.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <style>
+    
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Formulario de Contacto</h1>
+
+        <form action="#" method="post">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto" required>
+                <option value="">Selecciona una opción</option>
+                <option value="consulta">Consulta general</option>
+                <option value="pedido">Pedido o compra</option>
+                <option value="soporte">Soporte técnico</option>
+            </select>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+</body>
+
+</html>
