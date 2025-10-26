@@ -136,6 +136,14 @@
 
 }
 
+#licencia{
+
+    position: fixed;
+    top: 0;
+    left: 10;
+
+}
+
 body {
 
     background-color: #453939;
