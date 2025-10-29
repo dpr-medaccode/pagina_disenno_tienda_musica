@@ -2,136 +2,96 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor</title>
-    <link rel="stylesheet" href="reproductor.css">
+    <title>Reproductor - Music Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/ico/disco_ejemplo.ico">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/ico/disco.ico">
 </head>
 
-<body class="inria-sans-light">
+<body>
+
+    <div id="desplegable" onclick="document.getElementById('barra_lateral').classList.toggle('hiden')">
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+    </div>
+
+    <nav id="barra_lateral" class="hiden">
+
+        <img src="img/disco_logo.png" alt="Logo">
+
+        <a href="index.html">
+
+            <div>Inicio</div>
+
+        </a>
+
+        <a href="musica.html">
+
+            <div>Música</div>
+        </a>
+
+        <a href="reproductor.html">
+
+            <div>Reproductor</div>
+
+        </a>
+
+        <a href="carrito.html">
+
+            <div>Carrito</div>
+
+        </a>
+
+        <a href="contacto.html">
+
+            <div>Contacto</div>
+
+        </a>
+
+    </nav>
 
     <main>
 
-        <div id="desplegable">
+        <section id="texto_inicio">
 
-            <div></div>
+            <h1>Reproductor</h1>
 
-            <div></div>
+        </section>
 
-            <div></div>
+        <img id="disco_grande" src="img/portadas/jf4.jpg" alt="Disco">
 
-        </div>
+        <audio id="audio" controls style="display:block; margin: 30px auto;">
 
-        <img id="disco_grande" src="images/disco_ejemplo.webp" alt="">
+            <source src="audio/cancion.mp3" type="audio/mp3">
 
+            Tu navegador no soporta el reproductor de audio.
+
+        </audio>
 
     </main>
 
-    <aside class="hiden" id="barra_lateral">
+    <footer>
 
-        <img src="images/disco_logo.png" alt="Disco" id="disco_logo">
+        <a href="https://github.com/dpr-medaccode/pagina_disenno_tienda_musica"> pagina_disenno_tienda_musica</a> ©
+        2025 by <a href="https://github.com/dpr-medaccode">dpr-medaccode</a> is licensed under <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
+            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt=""
+            style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
-        <br>
-
-        <div>
-
-            <a href="index.html">Inicio</a>
-
-        </div>
-
-        <br>
-
-        <div>
-
-            <a href="tienda.html">Tienda</a>
-
-        </div>
-
-        <br>
-
-
-        <div>
-
-            <a href="reproductor.html">Reproductor</a>
-
-        </div>
-
-        <br>
-
-
-        <div>
-
-            <a href="carrito.html">Carrito</a>
-
-        </div>
-
-        <br>
-
-        <div>
-
-            <a href="musica.html">Mi musica</a>
-
-        </div>
-
-        <br>
-
-
-    </aside>
-
-    <input type="range" name="" id="range">
-
-    <img id="controles" src="images/controles otro color.png" alt="">
-
-    <h1 id="nombre">Aladdin Sane</h1>
-
-    <aside id="barra_musica">
-
-        <input type="text" name="" id="buscador">
-
-        <div id="albunes">
-
-            <div class="album">
-
-                <img src="images/portadas/df1.jpg" alt="">
-
-                <p>Dub Fatigue Vol. 1</p>
-
-            </div>
-
-            <div class="album">
-
-                <img src="images/portadas/Seoul2.jpg" alt="">
-
-                <p>Seoul Metro Line 2</p>
-
-            </div>
-
-
-            <div class="album">
-
-                <img src="images/portadas/jf3.jpg" alt="">
-
-                <p>Jungle Fatigue Vol. 3</p>
-
-            </div>
-
-        </div>
-
-
-
-
-
-    </aside>
+    </footer>
 
 </body>
-
-<script src="script.js"></script>
 
 </html>

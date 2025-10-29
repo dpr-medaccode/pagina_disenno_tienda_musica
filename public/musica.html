@@ -2,249 +2,242 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musica</title>
-    <link rel="stylesheet" href="musica.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/ico/disco.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Música - Music Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/ico/disco_ejemplo.ico">
 </head>
 
-<body class="inria-sans-light">
+<body>
 
-    <main>
+  <div id="desplegable" onclick="document.getElementById('barra_lateral').classList.toggle('hiden')">
 
-        <div id="desplegable">
+    <div></div>
 
-            <div></div>
+    <div></div>
 
-            <div></div>
+    <div></div>
 
-            <div></div>
+  </div>
 
-        </div>
+  <nav id="barra_lateral" class="hiden">
 
-        <div id="albunes2">
+    <img src="img/disco_logo.png" alt="Logo">
 
-              <div class="album2">
+    <a href="index.html">
 
+      <div>Inicio</div>
 
-                <img src="images/portadas/jf4.jpg" alt="">
+    </a>
 
-                <p>Jungle Fatigue Vol. 4</p>
+    <a href="musica.html">
 
-            </div>
+      <div>Música</div>
 
-            <div class="album2">
+    </a>
 
-                <img src="images/portadas/Gimme.jpg" alt="">
+    <a href="reproductor.html">
 
-                <p>Gimme A Break EP(3S-006) </p>
+      <div>Reproductor</div>
 
-            </div>
+    </a>
 
-          
+    <a href="carrito.html">
 
+      <div>Carrito</div>
 
+    </a>
 
-            <div class="album2">
+    <a href="contacto.html">
 
-                <img src="images/portadas/hope.jpg" alt="">
+      <div>Contacto</div>
 
-                <p>A New Hope</p>
+    </a>
 
-            </div>
+  </nav>
 
-            <div class="album2">
+  <main>
 
-                <img src="images/portadas/Growing.jpg" alt="">
+    <input type="text" id="buscador" placeholder="Buscar artista o álbum...">
 
-                <p>Growing Sprout(Oringinal Mix)</p>
+    <section id="texto_inicio">
 
-            </div>
+      <h1>Catálogo Musical</h1>
 
-            <div class="album2">
+    </section>
 
-                <img src="images/portadas/Toxic.jpg" alt="">
+    <section id="albunes">
 
-                <p>Toxic Rhythms(3S-009) </p>
+      <div class="album">
 
-            </div>
+        <img src="img/portadas/jf3.jpg" alt="Rock Vibes">
 
+        <p>Rock Vibes</p>
 
-            <div class="album2">
+        <p class="precio">$10.00</p>
 
-                <img src="images/portadas/Gimme.jpg" alt="">
+      </div>
 
-                <p>Gimme A Break EP(3S-006) </p>
+      <div class="album">
 
-            </div>
+        <img src="img/portadas/neurton.jpg" alt="Jazz Spirit">
 
+        <p>Jazz Spirit</p>
 
+        <p class="precio">$12.50</p>
 
-        </div>
+      </div>
 
-        <div id="albunes2">
+      <div class="album">
 
-              <div class="album2">
+        <img src="img/portadas/jf3.jpg" alt="Acoustic Nights">
 
+        <p>Acoustic Nights</p>
 
-                <img src="images/portadas/jf5.jpg" alt="">
+        <p class="precio">$11.00</p>
 
-                <p>Jungle Fatigue Vol. 5</p>
+      </div>
 
-            </div>
+      <div class="album">
 
-            <div class="album2">
+        <img src="img/portadas/neurton.jpg" alt="Jazz Spirit">
 
-                <img src="images/portadas/XMAS.jpg" alt="">
+        <p>Jazz Spirit</p>
 
-                <p>XMAS 2023 Dubs(3S-008)</p>
+        <p class="precio">$12.50</p>
 
-            </div>
+      </div>
 
-          
+      <div class="album">
 
+        <img src="img/portadas/jf3.jpg" alt="Acoustic Nights">
 
+        <p>Acoustic Nights</p>
 
-            <div class="album2">
+        <p class="precio">$11.00</p>
 
-                <img src="images/portadas/jf0.jpg" alt="">
+      </div>
 
-                <p>FATIGUE-001</p>
+      <div class="album">
 
-            </div>
+        <img src="img/portadas/neurton.jpg" alt="Jazz Spirit">
 
-            <div class="album2">
+        <p>Jazz Spirit</p>
 
-                <img src="images/portadas/natural.jpg" alt="">
+        <p class="precio">$12.50</p>
 
-                <p>Natural Thing E.P.</p>
+      </div>
 
-            </div>
+      <div class="album">
 
-            <div class="album2">
+        <img src="img/portadas/jf3.jpg" alt="Acoustic Nights">
 
-                <img src="images/portadas/neurton.jpg" alt="">
+        <p>Acoustic Nights</p>
 
-                <p>Neutron Style E.P.(3S-007) </p>
+        <p class="precio">$11.00</p>
 
-            </div>
+      </div>
 
+      <div class="album">
 
-            <div class="album2">
+        <img src="img/portadas/neurton.jpg" alt="Jazz Spirit">
 
-                <img src="images/portadas/Gimme.jpg" alt="">
+        <p>Jazz Spirit</p>
 
-                <p>Gimme A Break EP(3S-006) </p>
+        <p class="precio">$12.50</p>
 
-            </div>
+      </div>
 
+      <div class="album">
 
+        <img src="img/portadas/jf3.jpg" alt="Acoustic Nights">
 
-         
+        <p>Acoustic Nights</p>
 
-        </div>
+        <p class="precio">$11.00</p>
 
-    </main>
+      </div>
 
-    <aside class="hiden" id="barra_lateral">
+      <div class="album">
 
-        <img src="images/disco_logo.png" alt="Disco" id="disco_logo">
+        <img src="img/portadas/neurton.jpg" alt="Jazz Spirit">
 
-        <br>
+        <p>Jazz Spirit</p>
 
-        <div>
+        <p class="precio">$12.50</p>
 
-            <a href="index.html">Inicio</a>
+      </div>
 
-        </div>
+      <div class="album">
 
-        <br>
+        <img src="img/portadas/jf3.jpg" alt="Acoustic Nights">
 
-        <div>
+        <p>Acoustic Nights</p>
 
-            <a href="tienda.html">Tienda</a>
+        <p class="precio">$11.00</p>
 
-        </div>
+      </div>
 
-        <br>
+      <div class="album">
 
+        <img src="img/portadas/neurton.jpg" alt="Jazz Spirit">
 
-        <div>
+        <p>Jazz Spirit</p>
 
-            <a href="reproductor.html">Reproductor</a>
+        <p class="precio">$12.50</p>
 
-        </div>
+      </div>
 
-        <br>
+      <div class="album">
 
+        <img src="img/portadas/jf3.jpg" alt="Acoustic Nights">
 
-        <div>
+        <p>Acoustic Nights</p>
 
-            <a href="carrito.html">Carrito</a>
+        <p class="precio">$11.00</p>
 
-        </div>
+      </div>
 
-        <br>
+      <div class="album">
 
-        <div>
+        <img src="img/portadas/neurton.jpg" alt="Jazz Spirit">
 
-            <a href="musica.html">Mi musica</a>
+        <p>Jazz Spirit</p>
 
-        </div>
+        <p class="precio">$12.50</p>
 
-        <br>
+      </div>
 
+      <div class="album">
 
-    </aside>
+        <img src="img/portadas/jf3.jpg" alt="Acoustic Nights">
 
-    <aside id="barra_musica">
+        <p>Acoustic Nights</p>
 
-        <input type="text" name="" id="buscador">
+        <p class="precio">$11.00</p>
 
-        <div id="albunes">
+      </div>
 
-            <div class="album">
+    </section>
 
-                <img src="images/portadas/df1.jpg" alt="">
+  </main>
 
-                <p>Dub Fatigue Vol. 1</p>
+  <footer>
 
-            </div>
+    <a href="https://github.com/dpr-medaccode/pagina_disenno_tienda_musica"> pagina_disenno_tienda_musica</a> ©
+    2025 by <a href="https://github.com/dpr-medaccode">dpr-medaccode</a> is licensed under <a
+      href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img
+      src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+      style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+      src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
+      style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+      src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt=""
+      style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
-            <div class="album">
-
-                <img src="images/portadas/Seoul2.jpg" alt="">
-
-                <p>Seoul Metro Line 2</p>
-
-            </div>
-
-
-            <div class="album">
-
-                <img src="images/portadas/jf3.jpg" alt="">
-
-                <p>Jungle Fatigue Vol. 3</p>
-
-            </div>
-
-        </div>
-
-
-
-
-
-    </aside>
+  </footer>
 
 </body>
-
-<script src="script.js"></script>
 
 </html>

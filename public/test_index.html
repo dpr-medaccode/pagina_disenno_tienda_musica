@@ -8,6 +8,7 @@
   <title>Inicio - Music Store</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="img/ico/disco_ejemplo.ico">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
 </head>
 
@@ -29,7 +30,7 @@
 
     <img src="img/disco_logo.png" alt="Logo">
 
-    <a href="index.html">
+    <a href="inicio.html">
 
       <div>Inicio</div>
 
@@ -38,12 +39,6 @@
     <a href="musica.html">
 
       <div>Música</div>
-
-    </a>
-
-    <a href="reproductor.html">
-
-      <div>Reproductor</div>
 
     </a>
 
@@ -67,7 +62,7 @@
 
     <section id="texto_inicio">
 
-      <h1>Tu musica aqui y ahora</h1>
+      <h1>Bienvenido a Music Store</h1>
 
       <div id="album_grande">
 
@@ -185,11 +180,11 @@
 
     </section>
 
-    <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal">
 
       Simular Compra
 
-    </button>-->
+    </button>
 
   </main>
 
@@ -206,6 +201,47 @@
       style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
   </footer>
+
+  <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Activar tooltips
+    const tooltipTrigger = document.getElementById('miBoton');
+    const tooltip = new bootstrap.Tooltip(tooltipTrigger);
+  </script>
+
+  <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmLabel" aria-hidden="true">
+
+    <div class="modal-dialog">
+
+      <div class="modal-content text-dark">
+
+        <div class="modal-header">
+
+          <h5 class="modal-title" id="confirmLabel">¡Acción completada!</h5>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+
+        </div>
+
+        <div class="modal-body">
+
+          Tu compra/registro/inicio de sesión se ha realizado con éxito
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 
