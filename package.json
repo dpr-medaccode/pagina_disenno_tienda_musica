@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/dpr-medaccode/pagina_disenno_tienda_musica/issues"
   },
-  "homepage": "https://github.com/dpr-medaccode/pagina_disenno_tienda_musica#readme"
+  "homepage": "https://github.com/dpr-medaccode/pagina_disenno_tienda_musica#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "popper.js": "^1.16.1"
+  }
 }
