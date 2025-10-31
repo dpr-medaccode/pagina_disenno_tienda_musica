@@ -1,0 +1,15 @@
+#!/bin/bash
+
+INPUT="scss/style.scss"
+OUTPUT="public/style.css"
+
+
+if [ "$1" == "server" ]; then
+
+    sass --watch "$INPUT":"$OUTPUT"
+
+else
+
+    sass "$INPUT" "$OUTPUT"
+    
+fi

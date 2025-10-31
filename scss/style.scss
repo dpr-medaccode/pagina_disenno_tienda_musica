@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ======== ESTILOS GLOBALES ======== */
 * {
   margin: 0;
@@ -62,13 +61,16 @@ a {
 #buscador::placeholder {
   color: #ccc;
 }*/
+
 #buscador {
-  cursor: pointer;
+
+ cursor: pointer;
   position: fixed;
   top: 0px;
   left: 100px;
   z-index: 5;
-  margin: 40px auto 20px;
+
+   margin: 40px auto 20px;
   width: 60%;
   max-width: 500px;
   height: 40px;
@@ -79,7 +81,9 @@ a {
   font-size: 16px;
   outline: none;
   border-radius: 6px;
+  
 }
+
 
 /* ======== BARRA LATERAL ======== */
 #barra_lateral {
@@ -107,6 +111,7 @@ a {
   width: 100%;
   text-align: center;
   padding: 12px 0;
+
   margin: 5px 0;
   transition: background-color 0.3s;
 }
@@ -122,6 +127,7 @@ a {
   width: 100%;
 }
 
+
 /* ======== SECCIONES GENERALES ======== */
 main {
   padding-top: 80px;
@@ -130,6 +136,8 @@ main {
 #texto_inicio {
   text-align: center;
   margin-top: 40px;
+
+
 }
 
 #texto_inicio h1 {
@@ -149,8 +157,10 @@ main {
 }
 
 #album_grande:hover {
+
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+
 }
 
 #album_grande img {
@@ -174,12 +184,14 @@ main {
   padding: 20px;
 }
 
+
 footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
 }
+
 
 .album,
 .album2 {
@@ -218,26 +230,43 @@ footer {
 }
 
 /* ======== BANER ======== */
-#baner {
+
+#baner{
+
   background-color: #DB644B;
+
   display: flex;
+
+
   align-items: center;
+
   text-align: center;
+
   justify-content: center;
+
   margin-top: 10px;
   margin-bottom: 10px;
+
 }
 
-#baner img {
+#baner img{
+
   margin: 10px;
+
 }
 
 /* ======== ICONOS ======== */
+
 #grupo_iconos {
+
   display: flex;
+
   align-items: center;
+
   text-align: center;
+
   justify-content: center;
+
   flex-direction: row;
 }
 
@@ -246,6 +275,7 @@ footer {
   margin-left: 40px;
   margin-left: 40px;
   margin-bottom: 0px;
+
 }
 
 /* ======== CONTACTO ======== */
@@ -322,46 +352,55 @@ footer {
   #texto_inicio h1 {
     font-size: 45px;
   }
+
   #album_grande img {
     width: 200px;
   }
 }
+
 @media (max-width: 768px) {
   #barra_lateral {
     width: 180px;
   }
+
   #texto_inicio h1 {
     font-size: 36px;
   }
+
   #album_grande img {
     width: 160px;
   }
+
   #buscador {
     width: 80%;
   }
+
   .album,
   .album2 {
     width: 160px;
   }
 }
+
 @media (max-width: 480px) {
   #desplegable {
     padding: 15px;
   }
+
   #buscador {
     width: 90%;
     height: 35px;
   }
+
   #texto_inicio h1 {
     font-size: 28px;
   }
+
   #album_grande img {
     width: 130px;
   }
+
   .album,
   .album2 {
     width: 140px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
