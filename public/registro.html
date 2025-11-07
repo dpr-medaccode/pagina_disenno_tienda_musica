@@ -1,11 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/ico/disco_ejemplo.ico">
+
 </head>
+
 <body>
-    
+
+    <!-- Menú desplegable -->
+    <div id="desplegable" onclick="document.getElementById('barra_lateral').classList.toggle('hiden')">
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+    </div>
+
+    <!-- Barra lateral -->
+    <nav id="barra_lateral" class="hiden">
+
+        <img src="img/disco_logo.png" alt="Logo">
+
+        <a href="index.html">
+
+            <div>Inicio</div>
+
+        </a>
+
+        <a href="musica.html">
+
+            <div>Música</div>
+
+        </a>
+
+        <a href="reproductor.html">
+
+            <div>Reproductor</div>
+
+        </a>
+
+        <a href="carrito.html">
+
+            <div>Carrito</div>
+
+        </a>
+
+        <a href="contacto.html">
+
+            <div>Contacto</div>
+
+        </a>
+
+        <a href="registro.html">
+
+            <div>Registrarse</div>
+
+        </a>
+
+        <a href="inicio_secion.html">
+
+            <div>Iniciar secion</div>
+
+        </a>
+
+    </nav>
+
+    <main>
+
+        <section id="texto_inicio">
+
+            <h1>Registrese</h1>
+
+        </section>
+
+        <form>
+
+            <label for="email">Correo electrónico</label>
+
+            <input type="email" id="email" placeholder="Tu correo" required>
+
+            <label for="nombre">Nombre</label>
+
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+            <label for="contrasenna">Contraseña</label>
+
+            <input type="password" id="contrasenna" placeholder="*****" id="" required>
+
+            <label for="contrasenna_con">Confirme su contraseña</label>
+
+            <input type="password" id="contrasenna_con" placeholder="*****" id="" required>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+
+
+
+    </main>
+
+    <br><br><br>
+    <footer>
+
+        <a href="https://github.com/dpr-medaccode/pagina_disenno_tienda_musica"> pagina_disenno_tienda_musica</a> ©
+        2025 by <a href="https://github.com/dpr-medaccode">dpr-medaccode</a> is licensed under <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
+            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt=""
+            style="max-width: 1em;max-height:1em;margin-left: .2em;">
+
+    </footer>
+
 </body>
+
 </html>
