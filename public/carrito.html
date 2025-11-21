@@ -59,7 +59,7 @@
 
     </a>
 
-      <a href="registro.html">
+    <a href="registro.html">
 
       <div>Registrarse</div>
 
@@ -83,7 +83,7 @@
 
     <section id="albunes2">
 
-      <div class="album2">
+      <div class="album2" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/natural.jpg" alt="Rock Vibes">
 
@@ -92,7 +92,7 @@
         <p class="precio">$10.00</p>
 
       </div>
-      <div class="album2">
+      <div class="album2" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/Seoul2.jpg" alt="Pop Dreams">
 
@@ -101,7 +101,7 @@
         <p class="precio">$12.99</p>
 
       </div>
-      <div class="album2">
+      <div class="album2" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/jf5.jpg " alt="again">
 
@@ -110,7 +110,7 @@
         <p class="precio">$5.99</p>
 
       </div>
-      <div class="album2">
+      <div class="album2" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/Growing.jpg" alt="togeder">
 
@@ -120,7 +120,7 @@
 
       </div>
 
-      <div class="album2">
+      <div class="album2" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/hope.jpg" alt="Pop Dreams">
 
@@ -133,16 +133,17 @@
     </section>
 
     <div style="text-align:center; margin-top:30px;">
-
       <p>Total: <strong>$19.99</strong></p>
-
-      <button>Finalizar Compra</button>
-
+      <button id="comprarBtn">Finalizar Compra</button>
+      <div id="loader" class="loader" style="display:none;"></div>
     </div>
+
+
+
 
   </main>
 
-  <br><br><br><br><br><br><br>
+  <br><br><br><br>
 
   <footer>
 
@@ -157,6 +158,31 @@
       style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
   </footer>
+
+  <script>
+
+  const btn = document.getElementById('comprarBtn');
+  const loader = document.getElementById('loader');
+
+  btn.addEventListener('click', () => {
+
+    loader.style.display = 'block'; 
+    btn.disabled = true;                 
+    btn.textContent = "Procesando...";   
+
+    setTimeout(() => {
+
+      loader.style.display = 'none';
+      btn.disabled = false;
+      btn.textContent = "Finalizar Compra";
+
+      //alert("Compra completada!");
+
+    }, 2000);
+
+  });
+  
+</script>
 
 </body>
 

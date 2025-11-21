@@ -87,7 +87,21 @@
 
     <section id="baner">
 
-      <img src="img/baners/Taylor Swift.jpg" alt="">
+      <div class="carrusel">
+        
+        <div class="carrusel-item activo">
+          <img src="img/baners/Taylor Swift.jpg" alt="">
+        </div>
+
+        <div class="carrusel-item">
+          <img src="img/baners/everest.jpg" alt="">
+        </div>
+
+        <div class="carrusel-item">
+          <img src="img/baners/Beret.jpg" alt="">
+        </div>
+        
+      </div>
 
     </section>
 
@@ -97,7 +111,7 @@
 
       <h1>Tu musica aqui y ahora</h1>
 
-      <div id="album_grande">
+      <div id="album_grande" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/jf3.jpg" alt="Álbum destacado">
 
@@ -120,7 +134,7 @@
 
     <section id="albunes">
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/Gimme.jpg" alt="Álbum 1">
 
@@ -130,7 +144,7 @@
 
       </div>
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/df1.jpg" alt="Álbum 2">
 
@@ -140,7 +154,7 @@
 
       </div>
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/jf0.jpg" alt="Álbum 3">
 
@@ -150,7 +164,7 @@
 
       </div>
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/Gimme.jpg" alt="Álbum 1">
 
@@ -160,7 +174,7 @@
 
       </div>
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/df1.jpg" alt="Álbum 2">
 
@@ -170,7 +184,7 @@
 
       </div>
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/jf0.jpg" alt="Álbum 3">
 
@@ -180,7 +194,7 @@
 
       </div>
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/Gimme.jpg" alt="Álbum 1">
 
@@ -190,7 +204,7 @@
 
       </div>
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/df1.jpg" alt="Álbum 2">
 
@@ -200,7 +214,7 @@
 
       </div>
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/jf0.jpg" alt="Álbum 3">
 
@@ -210,7 +224,7 @@
 
       </div>
 
-      <div class="album">
+      <div class="album" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/jf0.jpg" alt="Álbum 3">
 
@@ -226,7 +240,7 @@
 
       <h1>Grandes ofertas</h1>
 
-      <div id="album_grande">
+      <div id="album_grande" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/jf3.jpg" alt="Álbum destacado">
 
@@ -236,7 +250,7 @@
 
       </div>
 
-      <div id="album_grande">
+      <div id="album_grande" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/jf3.jpg" alt="Álbum destacado">
 
@@ -246,7 +260,7 @@
 
       </div>
 
-      <div id="album_grande">
+      <div id="album_grande" onclick="location.href='./producto.html'">
 
         <img src="img/portadas/jf3.jpg" alt="Álbum destacado">
 
@@ -321,6 +335,24 @@
 
 
   </footer>
+
+  <script>
+  
+  const items = document.querySelectorAll(".carrusel-item");
+
+  let index = 0;
+
+  function mostrarCarrusel(nuevoIndex) {
+    items[index].classList.remove("activo");
+    index = (nuevoIndex + items.length) % items.length;
+    items[index].classList.add("activo");
+  }
+
+
+  // Cambio automático cada 4 segundos
+  setInterval(() => mostrarCarrusel(index + 1), 4000);
+  
+  </script>
 
 </body>
 
