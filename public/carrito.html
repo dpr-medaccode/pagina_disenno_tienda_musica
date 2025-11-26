@@ -5,7 +5,12 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Carrito - Music Store</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="img/ico/disco_ejemplo.ico">
 
@@ -15,174 +20,164 @@
 
 <body>
 
+  <!-- Menú desplegable -->
   <div id="desplegable" onclick="document.getElementById('barra_lateral').classList.toggle('hiden')">
-
     <div></div>
-
     <div></div>
-
     <div></div>
-
   </div>
 
+  <!-- Barra lateral -->
   <nav id="barra_lateral" class="hiden">
 
     <img src="img/disco_logo.png" alt="Logo">
 
     <a href="index.html">
-
       <div>Inicio</div>
-
     </a>
-
     <a href="musica.html">
-
       <div>Música</div>
-
     </a>
+
+     <a href="peliculas.html"><div>Películas</div></a>
 
     <a href="reproductor.html">
-
       <div>Reproductor</div>
-
     </a>
-
     <a href="carrito.html">
-
       <div>Carrito</div>
-
     </a>
-
     <a href="contacto.html">
-
       <div>Contacto</div>
-
     </a>
-
     <a href="registro.html">
-
       <div>Registrarse</div>
-
     </a>
-
     <a href="inicio_secion.html">
-
-      <div>Iniciar secion</div>
-
+      <div>Iniciar sesión</div>
     </a>
 
   </nav>
 
-  <main>
+  <main class="container mt-4">
 
-    <section id="texto_inicio">
-
-      <h1>Tu Carrito</h1>
-
+    <section id="texto_inicio" class="text-center">
+      <h1 class="mb-4">Tu Carrito</h1>
     </section>
 
-    <section id="albunes2">
+    <!-- Productos del carrito -->
+    <section id="albunes2" class="row g-4 justify-content-center">
 
-      <div class="album2" onclick="location.href='./producto.html'">
-
-        <img src="img/portadas/natural.jpg" alt="Rock Vibes">
-
+      <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
+        <img src="img/portadas/natural.jpg" class="img-fluid rounded" alt="Rock Vibes">
         <p>Rock Vibes</p>
-
         <p class="precio">$10.00</p>
-
       </div>
-      <div class="album2" onclick="location.href='./producto.html'">
 
-        <img src="img/portadas/Seoul2.jpg" alt="Pop Dreams">
-
+      <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
+        <img src="img/portadas/Seoul2.jpg" class="img-fluid rounded" alt="Pop Dreams">
         <p>Pop Dreams</p>
-
         <p class="precio">$12.99</p>
-
       </div>
-      <div class="album2" onclick="location.href='./producto.html'">
 
-        <img src="img/portadas/jf5.jpg " alt="again">
-
-        <p>again</p>
-
+      <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
+        <img src="img/portadas/jf5.jpg" class="img-fluid rounded" alt="Again">
+        <p>Again</p>
         <p class="precio">$5.99</p>
-
       </div>
-      <div class="album2" onclick="location.href='./producto.html'">
 
-        <img src="img/portadas/Growing.jpg" alt="togeder">
-
-        <p>togeder</p>
-
+      <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
+        <img src="img/portadas/Growing.jpg" class="img-fluid rounded" alt="Together">
+        <p>Together</p>
         <p class="precio">$16.00</p>
-
       </div>
 
-      <div class="album2" onclick="location.href='./producto.html'">
-
-        <img src="img/portadas/hope.jpg" alt="Pop Dreams">
-
-        <p>Pop Dreams</p>
-
+      <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
+        <img src="img/portadas/hope.jpg" class="img-fluid rounded" alt="Hope">
+        <p>Hope</p>
         <p class="precio">$5.00</p>
-
       </div>
 
     </section>
 
-    <div style="text-align:center; margin-top:30px;">
-      <p>Total: <strong>$19.99</strong></p>
-      <button id="comprarBtn">Finalizar Compra</button>
-      <div id="loader" class="loader" style="display:none;"></div>
+    <div class="text-center mt-2">
+
+      <p style="font-size: xx-large;">Total: <strong style="color: #e97b61;">$19.99</strong></p>
+
+      <button id="comprarBtn" class="btn btn-primary px-4">Finalizar Compra</button>
+
+      <div id="loader" class="loader mt-3" style="display:none;"></div>
+
     </div>
-
-
-
 
   </main>
 
-  <br><br><br><br>
+  <div class="modal fade" id="compraModal" tabindex="-1">
 
-  <footer>
+    <div class="modal-dialog modal-dialog-centered">
 
-    <a href="https://github.com/dpr-medaccode/pagina_disenno_tienda_musica"> pagina_disenno_tienda_musica</a> ©
-    2025 by <a href="https://github.com/dpr-medaccode">dpr-medaccode</a> is licensed under <a
-      href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img
-      src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
-      style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
-      src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
-      style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
-      src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt=""
-      style="max-width: 1em;max-height:1em;margin-left: .2em;">
+      <div class="modal-content text-center p-3 bg-secondary">
+
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100">¡Compra completada!</h5>
+        </div>
+
+        <div class="modal-body">
+          <p>Tu compra ha sido procesada correctamente.</p>
+          <img src="img/disco_logo.png" class="img-fluid" style="max-width: 120px;">
+        </div>
+
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center mt-5 p-3">
+
+    <a href="https://github.com/dpr-medaccode/pagina_disenno_tienda_musica">pagina_disenno_tienda_musica</a> ©
+    2025 by <a href="https://github.com/dpr-medaccode">dpr-medaccode</a> — Licencia
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+
+    <br>
+
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width:1em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width:1em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width:1em;">
 
   </footer>
 
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
   <script>
 
-  const btn = document.getElementById('comprarBtn');
-  const loader = document.getElementById('loader');
+    const btn = document.getElementById('comprarBtn');
+    const loader = document.getElementById('loader');
+    
+    const modalCompra = new bootstrap.Modal(document.getElementById('compraModal'));
 
-  btn.addEventListener('click', () => {
+    btn.addEventListener('click', () => {
 
-    loader.style.display = 'block'; 
-    btn.disabled = true;                 
-    btn.textContent = "Procesando...";   
+      loader.style.display = 'block';
+      btn.disabled = true;
+      btn.textContent = "Procesando...";
 
-    setTimeout(() => {
+      setTimeout(() => {
 
-      loader.style.display = 'none';
-      btn.disabled = false;
-      btn.textContent = "Finalizar Compra";
+        loader.style.display = 'none';
+        btn.disabled = false;
+        btn.textContent = "Finalizar Compra";
 
-      //alert("Compra completada!");
+        modalCompra.show();
 
-    }, 2000);
+      }, 2000);
 
-  });
-  
-</script>
+    });
+  </script>
 
 </body>
 

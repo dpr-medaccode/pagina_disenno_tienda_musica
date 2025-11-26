@@ -43,6 +43,10 @@
 
     </a>
 
+    <a href="peliculas.html">
+      <div>Películas</div>
+    </a>
+
     <a href="reproductor.html">
 
       <div>Reproductor</div>
@@ -88,7 +92,7 @@
     <section id="baner">
 
       <div class="carrusel">
-        
+
         <div class="carrusel-item activo">
           <img src="img/baners/Taylor Swift.jpg" alt="">
         </div>
@@ -100,7 +104,7 @@
         <div class="carrusel-item">
           <img src="img/baners/Beret.jpg" alt="">
         </div>
-        
+
       </div>
 
     </section>
@@ -337,21 +341,21 @@
   </footer>
 
   <script>
-  
-  const items = document.querySelectorAll(".carrusel-item");
 
-  let index = 0;
+    const items = document.querySelectorAll(".carrusel-item");
 
-  function mostrarCarrusel(nuevoIndex) {
-    items[index].classList.remove("activo");
-    index = (nuevoIndex + items.length) % items.length;
-    items[index].classList.add("activo");
-  }
+    let index = 0;
+
+    function mostrarCarrusel(nuevoIndex) {
+      items[index].classList.remove("activo");
+      index = (nuevoIndex + items.length) % items.length;
+      items[index].classList.add("activo");
+    }
 
 
-  // Cambio automático cada 4 segundos
-  setInterval(() => mostrarCarrusel(index + 1), 4000);
-  
+    // Cambio automático cada 4 segundos
+    setInterval(() => mostrarCarrusel(index + 1), 4000);
+
   </script>
 
 </body>

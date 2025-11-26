@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Registro - Music Store</title>
     <link rel="icon" type="image/png" href="img/ico/disco_ejemplo.ico">
-
-    <audio src="./audio/1⧸1 (Remastered 2004).ogg" autoplay></audio>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body>
+<body class="text-light">
 
-    <!-- Menú desplegable -->
     <div id="desplegable" onclick="document.getElementById('barra_lateral').classList.toggle('hiden')">
 
         <div></div>
@@ -26,104 +24,135 @@
 
     </div>
 
-    <!-- Barra lateral -->
+
     <nav id="barra_lateral" class="hiden">
 
         <img src="img/disco_logo.png" alt="Logo">
 
-        <a href="index.html">
+        <a href="index.html"><div>Inicio</div></a>
 
-            <div>Inicio</div>
+        <a href="musica.html"><div>Música</div></a>
 
-        </a>
+         <a href="peliculas.html"><div>Películas</div></a>
 
-        <a href="musica.html">
+        <a href="reproductor.html"><div>Reproductor</div></a>
 
-            <div>Música</div>
+        <a href="carrito.html"><div>Carrito</div></a>
 
-        </a>
+        <a href="contacto.html"><div>Contacto</div></a>
 
-        <a href="reproductor.html">
+        <a href="registro.html"><div>Registrarse</div></a>
 
-            <div>Reproductor</div>
-
-        </a>
-
-        <a href="carrito.html">
-
-            <div>Carrito</div>
-
-        </a>
-
-        <a href="contacto.html">
-
-            <div>Contacto</div>
-
-        </a>
-
-        <a href="registro.html">
-
-            <div>Registrarse</div>
-
-        </a>
-
-        <a href="inicio_secion.html">
-
-            <div>Iniciar secion</div>
-
-        </a>
+        <a href="inicio_secion.html"><div>Iniciar sesión</div></a>
 
     </nav>
 
-    <main>
+    <main class="container py-5" >
 
-        <section id="texto_inicio">
+        <section id="texto_inicio" class="text-center mb-5">
 
-            <h1>Registrese</h1>
+            <h1>Regístrate</h1>
 
         </section>
 
-        <form>
+        <form id="registroForm" class="mx-auto p-4 rounded-3" style="max-width: 500px; background-color: #5D5050;">
+           
+            <div class="mb-3">
 
-            <label for="email">Correo electrónico</label>
+                <label for="email" class="form-label">Correo electrónico</label>
+                
+                <input type="email" class="form-control bg-dark text-light border-danger" id="email"
+                    placeholder="Tu correo" required>
+            
+                </div>
 
-            <input type="email" id="email" placeholder="Tu correo" required>
+            <div class="mb-3">
 
-            <label for="nombre">Nombre</label>
+                <label for="nombre" class="form-label">Nombre</label>
+                
+                <input type="text" class="form-control bg-dark text-light border-danger" id="nombre"
+                    placeholder="Tu nombre" required>
 
-            <input type="text" id="nombre" placeholder="Tu nombre" required>
+            </div>
 
-            <label for="contrasenna">Contraseña</label>
+            <div class="mb-3">
 
-            <input type="password" id="contrasenna" placeholder="*****" id="" required>
+                <label for="contrasenna" class="form-label">Contraseña</label>
 
-            <label for="contrasenna_con">Confirme su contraseña</label>
+                <input type="password" class="form-control bg-dark text-light border-danger" id="contrasenna"
+                    placeholder="*****" required>
 
-            <input type="password" id="contrasenna_con" placeholder="*****" id="" required>
+            </div>
 
-            <button type="submit">Enviar</button>
+            <div class="mb-3">
+
+                <label for="contrasenna_con" class="form-label">Confirme su contraseña</label>
+
+                <input type="password" class="form-control bg-dark text-light border-danger" id="contrasenna_con"
+                    placeholder="*****" required>
+
+            </div>
+
+            <button type="submit" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#registroModal">
+                Enviar
+            </button>
 
         </form>
 
-
-
-
     </main>
 
-    <br><br><br>
-    <footer>
+    <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroLabel" aria-hidden="true">
+        
+        <div class="modal-dialog">
 
-        <a href="https://github.com/dpr-medaccode/pagina_disenno_tienda_musica"> pagina_disenno_tienda_musica</a> ©
-        2025 by <a href="https://github.com/dpr-medaccode">dpr-medaccode</a> is licensed under <a
-            href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img
-            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
-            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
-            src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
-            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
-            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt=""
-            style="max-width: 1em;max-height:1em;margin-left: .2em;">
+            <div class="modal-content text-dark">
+
+                <div class="modal-header">
+
+                
+                    <h5 class="modal-title" id="registroLabel">¡Registro completado!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    Tu registro se ha realizado con éxito.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <footer class="text-center py-4 mt-5">
+
+        <a href="https://github.com/dpr-medaccode/pagina_disenno_tienda_musica">pagina_disenno_tienda_musica</a> © 2025
+        by
+        <a href="https://github.com/dpr-medaccode">dpr-medaccode</a> 
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 
     </footer>
+
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+
+        const form = document.getElementById('registroForm');
+
+        form.addEventListener('submit', function (event) {
+
+            event.preventDefault();
+
+            const modal = new bootstrap.Modal(document.getElementById('registroModal'));
+
+            modal.show();
+
+        });
+
+    </script>
 
 </body>
 
