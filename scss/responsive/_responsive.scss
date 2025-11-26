@@ -1,0 +1,57 @@
+/* ======== RESPONSIVE ======== */
+@media (max-width: 1024px) {
+    #texto_inicio h1 {
+        font-size: 45px;
+    }
+
+    #album_grande img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    #barra_lateral {
+        width: 180px;
+    }
+
+    #texto_inicio h1 {
+        font-size: 36px;
+    }
+
+    #album_grande img {
+        width: 160px;
+    }
+
+    #buscador {
+        width: 80%;
+    }
+
+    .album,
+    .album2 {
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    #desplegable {
+        padding: 15px;
+    }
+
+    #buscador {
+        width: 90%;
+        height: 35px;
+    }
+
+    #texto_inicio h1 {
+        font-size: 28px;
+    }
+
+    #album_grande img {
+        width: 130px;
+    }
+
+    .album,
+    .album2 {
+        width: 140px;
+    }
+}

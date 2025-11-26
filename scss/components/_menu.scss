@@ -1,0 +1,20 @@
+/* ======== MENÚ DESPLEGABLE ======== */
+#desplegable {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+}
+
+#desplegable div {
+  width: 35px;
+  height: 4px;
+  background-color: #DB644B;
+  border-radius: 4px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+}

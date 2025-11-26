@@ -1,0 +1,41 @@
+/* ======== BARRA LATERAL ======== */
+#barra_lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 220px;
+  background-color: #DB644B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+#barra_lateral img {
+  width: 100px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#barra_lateral div {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+
+  margin: 5px 0;
+  transition: background-color 0.3s;
+}
+
+#barra_lateral div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#barra_lateral a {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 600;
+  width: 100%;
+}

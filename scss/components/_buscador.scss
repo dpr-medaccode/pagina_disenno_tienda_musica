@@ -1,0 +1,42 @@
+
+/* ======== BUSCADOR ======== */
+/*#buscador {
+  display: block;
+  margin: 40px auto 20px;
+  width: 60%;
+  max-width: 500px;
+  height: 40px;
+  background-color: #5D5050;
+  border: none;
+  padding: 0 20px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  border-radius: 6px;
+}
+
+#buscador::placeholder {
+  color: #ccc;
+}*/
+
+#buscador {
+
+  cursor: pointer;
+  position: fixed;
+  top: 0px;
+  left: 100px;
+  z-index: 5;
+
+  margin: 40px auto 20px;
+  width: 60%;
+  max-width: 500px;
+  height: 40px;
+  background-color: #5D5050;
+  border: none;
+  padding: 0 20px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  border-radius: 6px;
+
+}

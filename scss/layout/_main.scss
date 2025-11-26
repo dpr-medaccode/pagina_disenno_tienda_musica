@@ -1,0 +1,46 @@
+/* ======== SECCIONES GENERALES ======== */
+main {
+  padding-top: 80px;
+}
+
+#texto_inicio {
+  text-align: center;
+  margin-top: 40px;
+
+
+}
+
+#texto_inicio h1 {
+  font-size: 60px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+#album_grande {
+  background-color: #3B2E2E;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+  margin: 20px;
+  cursor:pointer;
+}
+
+#album_grande:hover {
+
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+
+}
+
+#album_grande img {
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+#album_grande p {
+  font-size: 22px;
+  margin: 5px;
+  color: #FFBBAA;
+}

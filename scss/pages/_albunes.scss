@@ -1,0 +1,56 @@
+
+/* ======== SECCIÓN ALBUMES ======== */
+#albunes,
+#albunes2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.album,
+.album2 {
+  background-color: #3B2E2E;
+  text-align: center;
+  width: 200px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor:pointer;
+}
+
+.album img,
+.album2 img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.album:hover,
+.album2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.album p,
+.album2 p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.precio {
+  font-size: 18px;
+  color: #FFD966;
+  font-weight: bold;
+}
