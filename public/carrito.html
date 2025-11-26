@@ -2,20 +2,14 @@
 <html lang="es">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Carrito - Music Store</title>
-
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="img/ico/disco_ejemplo.ico">
-
   <audio src="./audio/1⧸1 (Remastered 2004).ogg" autoplay></audio>
-
 </head>
 
 <body>
@@ -29,156 +23,161 @@
 
   <!-- Barra lateral -->
   <nav id="barra_lateral" class="hiden">
-
     <img src="img/disco_logo.png" alt="Logo">
-
-    <a href="index.html">
-      <div>Inicio</div>
-    </a>
-    <a href="musica.html">
-      <div>Música</div>
-    </a>
-
-     <a href="peliculas.html"><div>Películas</div></a>
-
-    <a href="reproductor.html">
-      <div>Reproductor</div>
-    </a>
-    <a href="carrito.html">
-      <div>Carrito</div>
-    </a>
-    <a href="contacto.html">
-      <div>Contacto</div>
-    </a>
-    <a href="registro.html">
-      <div>Registrarse</div>
-    </a>
-    <a href="inicio_secion.html">
-      <div>Iniciar sesión</div>
-    </a>
-
+    <a href="index.html"><div>Inicio</div></a>
+    <a href="musica.html"><div>Música</div></a>
+    <a href="peliculas.html"><div>Películas</div></a>
+    <a href="reproductor.html"><div>Reproductor</div></a>
+    <a href="carrito.html"><div>Carrito</div></a>
+    <a href="contacto.html"><div>Contacto</div></a>
+    <a href="registro.html"><div>Registrarse</div></a>
+    <a href="inicio_secion.html"><div>Iniciar sesión</div></a>
   </nav>
 
   <main class="container mt-4">
-
     <section id="texto_inicio" class="text-center">
       <h1 class="mb-4">Tu Carrito</h1>
     </section>
 
     <!-- Productos del carrito -->
     <section id="albunes2" class="row g-4 justify-content-center">
-
       <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
         <img src="img/portadas/natural.jpg" class="img-fluid rounded" alt="Rock Vibes">
         <p>Rock Vibes</p>
         <p class="precio">$10.00</p>
       </div>
-
       <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
         <img src="img/portadas/Seoul2.jpg" class="img-fluid rounded" alt="Pop Dreams">
         <p>Pop Dreams</p>
         <p class="precio">$12.99</p>
       </div>
-
       <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
         <img src="img/portadas/jf5.jpg" class="img-fluid rounded" alt="Again">
         <p>Again</p>
         <p class="precio">$5.99</p>
       </div>
-
       <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
         <img src="img/portadas/Growing.jpg" class="img-fluid rounded" alt="Together">
         <p>Together</p>
         <p class="precio">$16.00</p>
       </div>
-
       <div class="album2 col-6 col-md-4 col-lg-3 text-center" onclick="location.href='./producto.html'">
         <img src="img/portadas/hope.jpg" class="img-fluid rounded" alt="Hope">
         <p>Hope</p>
         <p class="precio">$5.00</p>
       </div>
-
     </section>
 
     <div class="text-center mt-2">
-
       <p style="font-size: xx-large;">Total: <strong style="color: #e97b61;">$19.99</strong></p>
-
       <button id="comprarBtn" class="btn btn-primary px-4">Finalizar Compra</button>
-
       <div id="loader" class="loader mt-3" style="display:none;"></div>
-
     </div>
-
   </main>
 
-  <div class="modal fade" id="compraModal" tabindex="-1">
+  <br><br><br><br><br><br><b><br>
 
+  <!-- Modal Formulario de Pago -->
+  <div class="modal fade" id="pagoModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4 bg-secondary">
+        <div class="modal-header">
+          <h5 class="modal-title">Formulario de Pago</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formPago" novalidate>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre en la tarjeta</label>
+              <input type="text" class="form-control  bg-dark text-light" id="nombre" required>
+              <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+            </div>
+            <div class="mb-3">
+              <label for="numeroTarjeta" class="form-label">Número de tarjeta</label>
+              <input type="text" class="form-control  bg-dark text-light" id="numeroTarjeta" pattern="\d{16}" required>
+              <div class="invalid-feedback">Número de tarjeta inválido (16 dígitos).</div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-6">
+                <label for="fecha" class="form-label">Fecha de vencimiento</label>
+                <input type="text" class="form-control bg-dark text-light" id="fecha" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/\d{2}" required>
+                <div class="invalid-feedback">Formato inválido (MM/AA).</div>
+              </div>
+              <div class="mb-3 col-6">
+                <label for="cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control bg-dark text-light" id="cvv" pattern="\d{3}" required>
+                <div class="invalid-feedback">CVV inválido (3 dígitos).</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Pagar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Modal Compra Realizada -->
+  <div class="modal fade" id="compraModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content text-center p-3 bg-secondary">
-
         <div class="modal-header border-0">
           <h5 class="modal-title w-100">¡Compra completada!</h5>
         </div>
-
         <div class="modal-body">
           <p>Tu compra ha sido procesada correctamente.</p>
           <img src="img/disco_logo.png" class="img-fluid" style="max-width: 120px;">
         </div>
-
         <div class="modal-footer border-0">
           <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
         </div>
-
       </div>
     </div>
   </div>
 
   <footer class="text-center mt-5 p-3">
-
-    <a href="https://github.com/dpr-medaccode/pagina_disenno_tienda_musica">pagina_disenno_tienda_musica</a> ©
-    2025 by <a href="https://github.com/dpr-medaccode">dpr-medaccode</a> — Licencia
+    <a href="https://github.com/dpr-medaccode/pagina_disenno_tienda_musica">pagina_disenno_tienda_musica</a> © 2025 by 
+    <a href="https://github.com/dpr-medaccode">dpr-medaccode</a> — Licencia 
     <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
-
     <br>
-
     <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width:1em;">
     <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width:1em;">
     <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width:1em;">
-
   </footer>
 
   <!-- BOOTSTRAP JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-
     const btn = document.getElementById('comprarBtn');
     const loader = document.getElementById('loader');
-    
-    const modalCompra = new bootstrap.Modal(document.getElementById('compraModal'));
+
+    const pagoModal = new bootstrap.Modal(document.getElementById('pagoModal'));
+    const compraModal = new bootstrap.Modal(document.getElementById('compraModal'));
 
     btn.addEventListener('click', () => {
+      pagoModal.show();
+    });
+
+    // Manejo de validación y envío del formulario
+    const formPago = document.getElementById('formPago');
+    formPago.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (!formPago.checkValidity()) {
+        formPago.classList.add('was-validated');
+        return;
+      }
 
       loader.style.display = 'block';
-      btn.disabled = true;
-      btn.textContent = "Procesando...";
+      pagoModal.hide();
 
       setTimeout(() => {
-
         loader.style.display = 'none';
-        btn.disabled = false;
-        btn.textContent = "Finalizar Compra";
-
-        modalCompra.show();
-
+        compraModal.show();
+        formPago.reset();
+        formPago.classList.remove('was-validated');
       }, 2000);
-
     });
   </script>
-
 </body>
-
 </html>
